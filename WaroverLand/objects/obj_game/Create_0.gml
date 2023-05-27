@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 randomise();
 score1 = 0;
 score2 = 100;
@@ -46,10 +47,12 @@ target1_ypos = 0;
 // second target of ability
 target2 = 0;
 // setting the turn of one player
-turn = 1;
+turn = 0;
 //global turn for abilities of a certain type of unit
 trombone_turn = 0;
 trumpet_turn = 0;
+//anouncement that an opponent has appeared
+opponent = 0;
 spaces= 0;
 units= 0;
 gametier = 0;
@@ -64,8 +67,6 @@ varj = 0;
 vari=0;
 varj=0;
 tier = 0;
-surface_resize(application_surface, 1800, 1800);
-window_set_size(1000, 1000);
 while(i != 6){
 	j = 0;
 	while (j != 5){
@@ -106,6 +107,7 @@ while(i != 6){
 }
 //scr_initialize_info_cards_abilities();
 //scr_initialize_info_heroes();
-player = instance_create_depth(0, 0, -3, obj_player);
+
+
 
 

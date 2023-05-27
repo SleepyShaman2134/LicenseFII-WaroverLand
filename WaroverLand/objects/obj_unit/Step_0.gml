@@ -3,6 +3,7 @@
 if(set == true && single == 0){
 	single++;
 	sprite_index=player.player_units_sprite[cardNum];
+	if(ipos>2)
 	scr_set_stats(player.player_units_sprite[cardNum]);
 }
 

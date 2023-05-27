@@ -18,3 +18,6 @@ draw_text_transformed(1000, 100, abilitytrigger, 4, 4, 0);
 
 draw_text_transformed(100, 250, "turn: ", 4, 4, 0);
 draw_text_transformed(400, 250, turn, 4, 4, 0);
+
+draw_text_transformed(1500, 400, "Opponent: ", 4, 4, 0);
+draw_text_transformed(2000, 400, opponent, 4, 4, 0);

@@ -85,4 +85,28 @@ function scr_set_stats(mysprite){
 		}
 		//HERE WE SET HIS ABILITIES
 	}
+	/*ipos = 0;
+jpos = 0;
+xpos_unit = 0;
+ypos_unit = 0;
+
+WHENEVER AN UNIT IS SET TO THE TABLE, THE OTHER CLIENT WILL
+RECEICE PACKET FROM THE SERVER
+
+*/
+	if(ipos > 2){
+		buffer_seek(obj_client.client_buffer, buffer_seek_start, 0);
+		/*buffer_write(obj_client.client_buffer, buffer_u8, 1);
+		buffer_write(obj_client.client_buffer, buffer_string, "HELLO WORLD");*/
+		//1 means an unit has been generated
+		buffer_write(obj_client.client_buffer, buffer_u8, network.set_unit);
+		buffer_write(obj_client.client_buffer, buffer_u8, cardNum);
+		buffer_write(obj_client.client_buffer, buffer_u8, vigor);
+		buffer_write(obj_client.client_buffer, buffer_u8, gains);
+		buffer_write(obj_client.client_buffer, buffer_u8, ipos);
+		buffer_write(obj_client.client_buffer, buffer_u8, jpos);
+		buffer_write(obj_client.client_buffer, buffer_u8, tiertype);
+		network_send_packet(obj_client.client, obj_client.client_buffer, buffer_tell(obj_client.client_buffer));
+		//show_message("Data sent to server");
+	}
 }

@@ -3,13 +3,13 @@
 function scr_tmpw2(){
 	with(game){
 		if(unit_used_tier == 1){
-			score1 -= unit_valuegp - 2;
+			score2 = score2 - unit_valuegp - 2;
 		}
 		if(unit_used_tier == 2){
-			score1 -= unit_valuegp - 3;
+			score2 = score2 - unit_valuegp - 3;
 		}
 		if(unit_used_tier == 3){
-			score1 -= unit_valuegp - 4;
+			score2 = score2 - unit_valuegp - 4;
 		}
 	}
 	game.activateability = 1;

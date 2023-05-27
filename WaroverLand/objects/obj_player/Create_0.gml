@@ -3,6 +3,9 @@
 //card_width=...
 //card_height=...
 #macro MAXPHAND 5 
+
+
+
 handPCount = 0;
 xPos = 400;
 yPos = 2242;
@@ -23,6 +26,7 @@ for(i = 0; i < 3; i += 1){
 //Coordinates of player1's power deck
 deckp1_x = 1728;
 deckp1_y = 2240;
+socket = 0;
 
 score_player = 0;
 //face_up == 1 cards will be face up
@@ -42,6 +46,7 @@ scr_initialize_info_units();
 scr_init_sprite_array();
 scr_init_players_units();
 i = 0;
+//deck = instance_create_depth(1728, 2240, -5, obj_deck);
 tier1 = instance_create_depth(2144, 1920, -3, obj_tier);
 with(tier1){
 	tier = 1;
@@ -65,3 +70,4 @@ with(tier3){
 	tierjpos = 1320;
 	sprite_index = spr_tier3;
 }
+game = instance_create_depth(0, 0, -3, obj_game);

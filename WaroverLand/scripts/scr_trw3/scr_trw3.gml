@@ -38,6 +38,11 @@ function scr_trw3(){
 				jpos = other.varj;
 				xpos_unit = other.varx;
 				ypos_unit = other.vary;
+				for(j = 0; j < 4; j++){
+					if(game.units1[ipos][j] != noone && j!= jpos){
+						player.gold++;
+				}
+			}
 			}
 		game.activateability = 1;
 		game.trombone_turn++;
