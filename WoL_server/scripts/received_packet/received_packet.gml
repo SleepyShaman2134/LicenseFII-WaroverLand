@@ -59,11 +59,15 @@ function received_packet(buffer, socket){
 			break;
 		case network.set_turn:
 			var i = 0;
+			var nb_turns = buffer_read(buffer, buffer_u8);
+			var nb_gold = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
 				if(_sock != socket){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_turn);
+					buffer_write(server_buffer, buffer_u8, nb_turns);
+					buffer_write(server_buffer, buffer_u8, nb_gold);
 					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
 				}
 				i++;

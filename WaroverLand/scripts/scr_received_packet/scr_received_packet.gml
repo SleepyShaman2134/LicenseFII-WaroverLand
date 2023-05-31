@@ -32,14 +32,20 @@ function scr_received_packet(buffer){
 		case network.player_connect:
 			obj_endturn.turn = buffer_read(buffer, buffer_u8);
 			var _socket = buffer_read(buffer, buffer_u8);
-			var _player = instance_create_depth(0, 0, 0, obj_player);
-			_player.socket = _socket;
+			player = instance_create_depth(0, 0, 0, obj_player);
+			player.socket = _socket;
 			break;
 		case network.player_joined:
 			obj_game.opponent = 1;
 			break;
 		case network.set_turn:
 			obj_endturn.turn = 1;
+			var value1, value2;
+			value1 = buffer_read(buffer, buffer_u8);
+			value2 = buffer_read(buffer, buffer_u8);
+			obj_game.nb_turns = value1;  
+			obj_game.gold_turn =  value2;
+			player.gold += obj_game.gold_turn;
 			break;
 	}
 }

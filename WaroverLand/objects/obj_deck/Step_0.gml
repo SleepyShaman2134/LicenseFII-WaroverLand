@@ -22,11 +22,11 @@ if(obj_endturn.turn == 1){
 	}
 }
 
-with(player1){
+/*with(player1){
 	for (i = 0; i < deckPCount; i+=1){
 		card_sprite = spr_cardback;
 		if (face_up){
 			card_sprite=sprite_array[deckp1[i]];
 		}
 	}
-}
+}*/

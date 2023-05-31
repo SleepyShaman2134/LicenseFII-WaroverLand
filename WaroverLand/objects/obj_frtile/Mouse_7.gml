@@ -1,18 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(obj_endturn.turn == 1)
-	if(/*vari>2 &&*/ player.tier1.selected == true &&  game.gametier == 1 && isunit == 0){
+	if(/*vari>2 &&*/ player.tier1.selected == true &&  game.gametier == 1 && isunit == 0 && player.gold >= 3){
 		scr_set_unit(x, y);
+		player.gold = player.gold - 3;
 		game.gametier = 0;
 	}
 
-	if(/*vari>2 &&*/ player.tier2.selected == true && game.gametier == 2 && isunit == 0){
+	if(/*vari>2 &&*/ player.tier2.selected == true && game.gametier == 2 && isunit == 0  && player.gold >= 5){
 		scr_set_unit(x, y);
+		player.gold = player.gold - 5;
 		game.gametier = 0;
 	}
 
-	if(/*vari>2 &&*/ player.tier3.selected == true && game.gametier == 3 && isunit == 0){
+	if(/*vari>2 &&*/ player.tier3.selected == true && game.gametier == 3 && isunit == 0  && player.gold >= 8){
 		scr_set_unit(x, y);
+		player.gold = player.gold - 8;
 		game.gametier = 0;
 	}
 

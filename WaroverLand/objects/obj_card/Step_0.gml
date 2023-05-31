@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+//sprite_index = player.player_cards_sprite[cardNum];
+
 if(card_drawn == true){
 	if(alarm[0] == -1){
 		alarm[0] = 1;

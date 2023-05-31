@@ -1,21 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-scr_init_sprite_array();
-
 card_drawn = false;
-
+selected = false;
 card_in_hand = false;
+hand_position = 0;
+cardNum = 0;
 
 player = obj_player;
-cardNum = 0;
-hand_position = 0;
-
-xPos = 0;
-yPos = 2242;
-to_x = 0;
-to_y = 0;
-
-card_witdh = 200;
-card_height = 200;
-
-selected = false;
+deck = obj_deck;
+game = obj_game;
+meter = obj_lvlmeter;
+xPos = 1728;
+yPos = 2248;
+lord = "euphonim";

@@ -13,10 +13,7 @@ if(obj_endturn.turn == 1){
 			game.gametier = 3;
 		}
 	}
+	
 
-
-	if(selected == true){
-		x = mouse_x;
-		y = mouse_y;
-	}
+	
 }

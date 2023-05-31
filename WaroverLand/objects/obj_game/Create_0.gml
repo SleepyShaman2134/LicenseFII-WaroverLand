@@ -53,6 +53,19 @@ trombone_turn = 0;
 trumpet_turn = 0;
 //anouncement that an opponent has appeared
 opponent = 0;
+//number of turns
+nb_turns = 0;
+//gold gain per turn
+gold_turn = 0;
+//variables for activating a spell
+activate_card = 0;
+targetunit = 0;
+targetuniti = 0;
+targetunitj = 0;
+targetunitx = 0;
+targetunity = 0;
+meter = 0;
+targetstructure = 0;
 spaces= 0;
 units= 0;
 gametier = 0;
