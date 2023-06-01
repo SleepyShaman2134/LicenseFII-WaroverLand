@@ -3,15 +3,15 @@
 function scr_eupho_3(){
 	if(game.meter == 1){
 		player.willpower = player.willpower - 2;
-		game.units1[vari][varj].gains += 2;
+		game.units1[ipos][jpos].rgains += 2;
 	}
 	if(game.meter == 2){
 		player.willpower = player.willpower - 3;
-		game.units1[vari][varj].gains += 3;
+		game.units1[ipos][jpos].rgains += 3;
 	}
 	if(game.meter == 3){
 		player.willpower = player.willpower - 4;
-		game.units1[vari][varj].gains += 4;
+		game.units1[ipos][jpos].rgains += 4;
 	}
-		 
+	game.card_used.uses_per_turn -= 1;
 }

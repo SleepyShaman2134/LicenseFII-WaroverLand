@@ -62,7 +62,7 @@ if(obj_endturn.turn == 1){
 				game.targetunit = game.units1[ipos][jpos];
 				var check = 0;
 				for(j = 0; j < 5; j++){
-					if(game.units1[ipos][j] != noone){
+					if(game.units1[ipos][j] != noone && j != jpos){
 						check = 1;
 					}
 				}

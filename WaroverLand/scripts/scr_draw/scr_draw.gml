@@ -4,8 +4,9 @@ function scr_draw(draw){
 	if (deck.deckPCount - draw < 0) {
 		return;	
 	}
+	
+	
 	if (handPCount == MAXPHAND){
-		gold = gold +3;
 		return;
 	}
 	
@@ -18,7 +19,7 @@ function scr_draw(draw){
 			card_drawn = true;
 		 	hand_position = other.handPCount - 1;
 			cardNum = other.hand[hand_position];
-			
+			uses_per_turn = 1;
 		}
 	}
 }

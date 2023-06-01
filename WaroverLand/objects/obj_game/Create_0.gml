@@ -73,7 +73,8 @@ affect_tile = 0;
 debuff_7 = 0;
 //debuff of 8th ability
 debuff_8 = 0;
-
+//check the spell used
+card_used = 0;
 // tiles
 spaces= 0;
 units= 0;

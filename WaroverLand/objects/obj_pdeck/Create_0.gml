@@ -3,6 +3,7 @@
 //player_cards = 0;
 //player_cards_sprite = 0;
 //scr_init_player_cards();
+randomise();
 deckp1_x = 1728;
 deckp1_y = 2000;
 deck_buffer_x = .4;

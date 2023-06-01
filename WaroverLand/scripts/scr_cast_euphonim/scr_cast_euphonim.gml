@@ -10,6 +10,8 @@ function scr_cast_euphonim(ability_number){
 		if(game.nb_turns < 5){
 			player.gold = player.gold + 1;
 		}
+		game.card_used = player.handCard[hand_position];
+		uses_per_turn -= 1;
 	}
 	if(ability_number == 2){
 		if(player.willpower >= obj_lvlmeter.lvl_meter || player.magic >= obj_lvlmeter.lvl_meter){
@@ -17,6 +19,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	
@@ -26,6 +29,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	if(ability_number == 4){
@@ -34,6 +38,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	
@@ -44,6 +49,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	if(ability_number == 6){
@@ -51,6 +57,8 @@ function scr_cast_euphonim(ability_number){
 			player.willpower -= 3;
 			player.discordia -= 1;
 		}
+		game.card_used = player.handCard[hand_position];
+		uses_per_turn -= 1;
 	}
 	
 	if(ability_number == 7){
@@ -61,6 +69,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
 			game.debuff_7 = 1;
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	
@@ -70,6 +79,7 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.debuff_8 = 1
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 	
@@ -80,6 +90,19 @@ function scr_cast_euphonim(ability_number){
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.affect_tile = "Roaring valor";
+			game.meter = obj_lvlmeter.lvl_meter;
+			game.card_used = player.handCard[hand_position];
+		}
+	}
+	
+	if(ability_number == 10){
+		if(player.willpower >= obj_lvlmeter.lvl_meter + 3 ||
+		player.magic >= obj_lvlmeter.lvl_meter + 4){
+			game.activate_card = 9;
+			game.targetunit = 0;
+			game.targetstructure = 0;
+			game.affect_tile = "Roaring valor";
+			game.card_used = player.handCard[hand_position];
 		}
 	}
 }

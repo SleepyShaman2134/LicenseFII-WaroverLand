@@ -41,4 +41,5 @@ function scr_eupho_5(){
 	game.targetunit = 0;
 	game.targetstructure = 0;
 	game.meter = 0;
+	game.card_used.uses_per_turn -= 1;
 }
