@@ -21,3 +21,6 @@ draw_text_transformed(400, 250, turn, 4, 4, 0);
 
 draw_text_transformed(1500, 400, "Opponent: ", 4, 4, 0);
 draw_text_transformed(2000, 400, opponent, 4, 4, 0);
+
+draw_text_transformed(1500, 550, "Card ab: ", 4, 4, 0);
+draw_text_transformed(2000, 550, activate_card, 4, 4, 0);

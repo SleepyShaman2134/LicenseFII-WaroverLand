@@ -47,6 +47,7 @@ if(obj_endturn.turn == 1){
 				game.targetunitj = jpos;
 				game.targetunitx = xpos_unit;
 				game.targetunity = ypos_unit;
+				game.affect_tile = "Honourable gift";
 			}
 			else{
 				game.activate_card = 0;
@@ -77,12 +78,13 @@ if(obj_endturn.turn == 1){
 		break;
 		
 		case 4:
-			if(game.targetunit == 0 && game.targetstructure = 0){
+			if(game.targetunit == 0 && game.targetstructure = 0 && game.activate_card == 4){
 				game.targetunit = game.units1[ipos][jpos];
 				game.targetuniti = ipos;
 				game.targetunitj = jpos;
 				game.targetunitx = xpos_unit;
 				game.targetunity = ypos_unit;
+				game.affect_tile = "Brasoveanca";
 			}else{
 				game.activate_card = 0;
 				game.targetunit = 0;

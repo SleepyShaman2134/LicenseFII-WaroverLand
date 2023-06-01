@@ -60,6 +60,7 @@
     {"id":{"name":"obj_deck","path":"objects/obj_deck/obj_deck.yy",},},
     {"id":{"name":"scr_init_player_cards","path":"scripts/scr_init_player_cards/scr_init_player_cards.yy",},},
     {"id":{"name":"spr_tier2","path":"sprites/spr_tier2/spr_tier2.yy",},},
+    {"id":{"name":"scr_eupho_9","path":"scripts/scr_eupho_9/scr_eupho_9.yy",},},
     {"id":{"name":"scr_fhw3","path":"scripts/scr_fhw3/scr_fhw3.yy",},},
     {"id":{"name":"spr_meter2","path":"sprites/spr_meter2/spr_meter2.yy",},},
     {"id":{"name":"scr_cast_ability1","path":"scripts/scr_cast_ability1/scr_cast_ability1.yy",},},

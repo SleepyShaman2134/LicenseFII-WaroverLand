@@ -64,8 +64,17 @@ targetuniti = 0;
 targetunitj = 0;
 targetunitx = 0;
 targetunity = 0;
-meter = 0;
 targetstructure = 0;
+//level of the empowered spell
+meter = 0;
+//variable that touches the tiles
+affect_tile = 0;
+//Debuff of 7th abilty
+debuff_7 = 0;
+//debuff of 8th ability
+debuff_8 = 0;
+
+// tiles
 spaces= 0;
 units= 0;
 gametier = 0;

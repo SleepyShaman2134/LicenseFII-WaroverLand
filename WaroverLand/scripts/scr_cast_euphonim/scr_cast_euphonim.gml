@@ -28,7 +28,7 @@ function scr_cast_euphonim(ability_number){
 			game.meter = obj_lvlmeter.lvl_meter;
 		}
 	}
-	if(ability_number != 4){
+	if(ability_number == 4){
 		if(player.willpower >= obj_lvlmeter.lvl_meter || player.magic >= obj_lvlmeter.lvl_meter){
 			game.activate_card = 4;
 			game.targetunit = 0;
@@ -40,9 +40,46 @@ function scr_cast_euphonim(ability_number){
 	if(ability_number == 5){
 		if(player.willpower >= obj_lvlmeter.lvl_meter || player.magic >= obj_lvlmeter.lvl_meter){
 			game.activate_card = 5;
+			game.affect_tile = "Demoralizing strike";
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
+		}
+	}
+	if(ability_number == 6){
+		if(player.willpower >= 3 || player.magic >= 3){
+			player.willpower -= 3;
+			player.discordia -= 1;
+		}
+	}
+	
+	if(ability_number == 7){
+		if(player.willpower >= 5 || player.magic >= 5){
+			game.activate_card = 7;
+			//game.affect_tile = "Demoralizing strike";
+			game.targetunit = 0;
+			game.targetstructure = 0;
+			game.meter = obj_lvlmeter.lvl_meter;
+			game.debuff_7 = 1;
+		}
+	}
+	
+	if(ability_number == 8){
+		if(player.willpower >= 4 || player.magic >= 4){
+			game.activate_card = 8;
+			game.targetunit = 0;
+			game.targetstructure = 0;
+			game.debuff_8 = 1
+		}
+	}
+	
+	if(ability_number == 9){
+		if(player.willpower >= obj_lvlmeter.lvl_meter + 3 ||
+		player.magic >= obj_lvlmeter.lvl_meter + 4){
+			game.activate_card = 9;
+			game.targetunit = 0;
+			game.targetstructure = 0;
+			game.affect_tile = "Roaring valor";
 		}
 	}
 }

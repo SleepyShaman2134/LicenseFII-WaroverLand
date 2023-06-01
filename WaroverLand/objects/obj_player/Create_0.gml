@@ -20,6 +20,7 @@ handCard = 0;
 
 
 willpower = 300;
+discordia = 0;
 magic = 0;
 gold = 300;
 tier1 = 0;

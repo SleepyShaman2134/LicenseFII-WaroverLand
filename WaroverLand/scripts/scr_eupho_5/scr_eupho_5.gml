@@ -6,7 +6,7 @@ function scr_eupho_5(){
 		 case 1:
 			obj_player.willpower -= meter;
 			other.structure = other.structure - meter;
-			if(isunit == 1){
+			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 1;
 				}
@@ -16,7 +16,7 @@ function scr_eupho_5(){
 		 case 2:
 			obj_player.willpower -= meter;
 			other.structure -= meter;
-			if(isunit == 1){
+			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 2;
 				}
@@ -26,7 +26,7 @@ function scr_eupho_5(){
 		case 3:
 			obj_player.willpower -= meter;
 			other.structure -= meter;
-			if(isunit == 1){
+			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 3;
 				}
@@ -37,5 +37,8 @@ function scr_eupho_5(){
 		show_message("SOMETHING WENT WRONG");
 		}
 	}
-
+	game.activate_card = 0;
+	game.targetunit = 0;
+	game.targetstructure = 0;
+	game.meter = 0;
 }
