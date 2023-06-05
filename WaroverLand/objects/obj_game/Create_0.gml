@@ -7,6 +7,9 @@ score2 = 100;
 info_units=0;
 sprite_units = 0;
 nb_of_units = 0;
+confirm = 0;
+//check functionality
+check = 0;
 //for obj_unit
 ispressed = 0;
 //for obj_unit for abilities for targeting
@@ -65,6 +68,10 @@ targetunitj = 0;
 targetunitx = 0;
 targetunity = 0;
 targetstructure = 0;
+//variables for activating a lord's ability
+ability_lord = 0;
+//how many times can use his ability
+lord_use = 0;
 //level of the empowered spell
 meter = 0;
 //variable that touches the tiles
@@ -77,13 +84,21 @@ debuff_8 = 0;
 card_used = 0;
 // tiles
 spaces= 0;
+//History of the last actions used
+history = 0;
+//gold of the opponent
+gold_op = 3;
+//magic/willpower of the opponent
+mana_op = 0;
+//discordia of the opponent
+discordia_op = 0;
 units= 0;
 gametier = 0;
 units1 = 0;
 card1 = 0;
 i = 0;
 j = 0;
-xspace = 160;
+xspace = 900;
 yspace = 500;
 varx = 0;
 varj = 0;
@@ -124,7 +139,7 @@ while(i != 6){
 		xspace += 288;
 		j++;
 	}
-	xspace = 160;
+	xspace = 900;
 	yspace += 300;
 	i++;
 }

@@ -5,30 +5,39 @@ function scr_eupho_5(){
 		switch (meter){
 		 case 1:
 			obj_player.willpower -= meter;
+			scr_net_change_mana(obj_player.willpower);
 			other.structure = other.structure - meter;
+			scr_net_change_structure(vari, varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 1;
+					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
 				}
 			}
 		 break;
 		 
 		 case 2:
 			obj_player.willpower -= meter;
+			scr_net_change_mana( obj_player.willpower);
 			other.structure -= meter;
+			scr_net_change_structure(vari, varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 2;
+					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
 				}
 			}
 		break;
 		
 		case 3:
 			obj_player.willpower -= meter;
+			scr_net_change_mana( obj_player.willpower);
 			other.structure -= meter;
+			scr_net_change_structure(vari, varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 3;
+					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
 				}
 			}
 		break;

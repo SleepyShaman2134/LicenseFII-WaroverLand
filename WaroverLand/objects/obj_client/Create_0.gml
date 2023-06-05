@@ -5,11 +5,26 @@ enum network{
 	player_connect,
 	player_joined,
 	set_turn,
+	change_position,
+	change_stats,
+	change_structure,
+	eliminate_unit,
+	set_world_debuff,
+	set_unit_debuff,
+	change_gold,
+	change_mana,
+	change_score,
+	change_discordia,
+	change_gold_op,
+	change_mana_op,
+	change_score_op,
+	change_discordia_op,
+	dispell_debuff,
 }
 
 client = network_create_socket(network_socket_tcp);
 check_network =network_connect(client, "127.0.0.1", 6510);
 //192.168.43.23
-show_message(check_network);
+//show_message(check_network);
 client_buffer = buffer_create(1024, buffer_fixed, 1);
 player = 0;

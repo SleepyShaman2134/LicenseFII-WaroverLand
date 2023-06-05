@@ -2,8 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_fhw2(){
 	if(game.used_unit.unit_turn2 == 0){
-		game.score1 += 1;
+		if(game.debuff_7 == 0){
+			game.score1 += 1;
+			scr_net_change_score(game.score1);
+		}
 		rvigor++;
+		scr_net_change_stats(ipos, jpos, rgains, gains, rvigor, vigor);
 		game.activateability = 1;
 	}
 	with(game.used_unit){

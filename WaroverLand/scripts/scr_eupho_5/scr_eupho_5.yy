@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "euphonim_cards",
+    "path": "folders/Scripts/euphonim_cards.yy",
   },
 }

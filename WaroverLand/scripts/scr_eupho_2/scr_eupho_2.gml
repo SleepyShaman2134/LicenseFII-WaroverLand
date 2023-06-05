@@ -5,27 +5,34 @@ function scr_eupho_2(){
 			isunit = 0;
 			if(game.meter == 1){
 				structure = structure + 1;
+				scr_net_change_structure(vari, varj, structure);
 				player.willpower = player.willpower - 1;
+				scr_net_change_mana(player.willpower);
 			}
 			if(game.meter == 2){
 				structure = structure + 2;
+				scr_net_change_structure(vari, varj, structure);
 				player.willpower = player.willpower - 2;
+				scr_net_change_mana(player.willpower);
 			}
 			if(game.meter == 3){
 				structure = structure + 3;
+				scr_net_change_structure(vari, varj, structure);
 				player.willpower = player.willpower - 3;
+				scr_net_change_mana(player.willpower);
 			}
 		}
 	with(game.units1[game.targetuniti][game.targetunitj]){
 			x = other.varx;
 			y = other.vary;
-		}
-		game.units1[vari][varj] = game.targetunit;
-		game.units1[game.targetuniti][game.targetunitj] = noone;
-		game.targetunitx = varx;
-		game.targetunity = vary;
-		with(game.spaces[vari][varj]){
-		isunit = 1;
+	}
+	game.units1[vari][varj] = game.targetunit;
+	game.units1[game.targetuniti][game.targetunitj] = noone;
+	game.targetunitx = varx;
+	game.targetunity = vary;
+	scr_net_change_position(ipos, jpos, vari, varj);
+	with(game.spaces[vari][varj]){
+	isunit = 1;
 	}
 	with(game.units1[vari][varj]){
 		ipos = other.vari;

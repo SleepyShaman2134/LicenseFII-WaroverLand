@@ -1,11 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_fhw3(vari, varj, unit_tier, points){
-	if(game.used_unit_i == 3){
+	if(game.used_unit_i == 3 && game.debuff_7 == 0){
 		game.score1 += points + 5;
+		scr_net_change_score(game.score1);
 	}
 	else{
-		game.score1 += points;
+		if(game.debuff_7 == 0){
+			game.score1 += points;
+			scr_net_change_score(game.score1);
+		}
 	}
 	if(unit_tier == 1){
 		with(game.spaces[game.used_unit_i][game.used_unit_j]){
@@ -26,8 +30,9 @@ function scr_fhw3(vari, varj, unit_tier, points){
 			ypos_unit = other.vary;
 		}
 		for(j = 0; j < 5; j++){
-			if(j != varj && game.units1[vari][j] != noone){
+			if(j != varj && game.units1[vari][j] != noone && game.debuff_7 == 0){
 				game.score1 +=1;
+				scr_net_change_score(game.score1);
 			}
 		}
 	}
@@ -47,8 +52,9 @@ function scr_fhw3(vari, varj, unit_tier, points){
 			ypos_unit = other.vary;
 		}
 		for(j = 0; j < 5; j++){
-			if(j != varj && game.units1[vari][j] != noone){
+			if(j != varj && game.units1[vari][j] != noone && game.debuff_7 == 0){
 				game.score1 +=2;
+				scr_net_change_score(game.score1);
 			}
 		}
 	}
@@ -68,11 +74,13 @@ function scr_fhw3(vari, varj, unit_tier, points){
 			ypos_unit = other.vary;
 		}
 		for(j = 0; j < 5; j++){
-			if(j != varj && game.units1[vari][j] != noone){
+			if(j != varj && game.units1[vari][j] != noone && game.debuff_7 == 0){
 				game.score1 +=3;
+				scr_net_change_score(game.score1);
 			}
 		}
 	}
+	scr_net_change_position(game.used_unit_i, game.used_unit_j, vari, varj);
 	isunit = 1;
 	game.activateability = 1;
 }

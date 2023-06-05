@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+randomise();
 vigor = 0;
 rvigor = 0;
 tiertype = 0;
@@ -13,7 +13,7 @@ blocked = 0;
 unit_turn1 = 0;
 unit_turn2 = 0;
 unit_turn3 = 0;
-
+single2 = 0;
 cardNum=0;
 showbuttons = 0;
 single = 0;

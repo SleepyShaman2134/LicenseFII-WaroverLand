@@ -14,7 +14,7 @@ function scr_draw(draw){
 		deck.deckPCount = deck.deckPCount - 1;
 		hand[handPCount++] = deck.deck[deck.deckPCount];
 		deck.deck[deck.deckPCount] = 0;
-		handCard[handPCount -1] = instance_create_depth(1728, 2000, -3, obj_card);
+		handCard[handPCount -1] = instance_create_depth(2500, 2000, -3, obj_card);
 		with(handCard[handPCount - 1]){
 			card_drawn = true;
 		 	hand_position = other.handPCount - 1;

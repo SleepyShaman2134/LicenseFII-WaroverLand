@@ -7,4 +7,4 @@ if(selected == true){
 	y = mouse_y;
 }
 draw_set_color(c_black);
-draw_text_transformed(x, y-300, cardNum, 4, 4, 0);
+draw_text_transformed(x, y-150, cardNum, 4, 4, 0);

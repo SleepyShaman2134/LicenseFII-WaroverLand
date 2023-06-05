@@ -5,6 +5,21 @@ enum network{
 	player_connect,
 	player_joined,
 	set_turn,
+	change_position,
+	change_stats,
+	change_structure,
+	eliminate_unit,
+	set_world_debuff,
+	set_unit_debuff,
+	change_gold,
+	change_mana,
+	change_score,
+	change_discordia,
+	change_gold_op,
+	change_mana_op,
+	change_score_op,
+	change_discordia_op,
+	dispell_debuff,
 }
 port = 6510;
 max_clients = 2;
