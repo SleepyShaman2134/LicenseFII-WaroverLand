@@ -6,6 +6,9 @@ if(mouse_check_button_released(mb_left) && released == 0 && abilitytrigger == 1)
 	
 }
 
+
+
+
 /*if(mouse_check_button_released(mb_left)){
 	button_used = 0;
 }*/

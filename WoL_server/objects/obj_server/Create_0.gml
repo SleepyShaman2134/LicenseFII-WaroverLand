@@ -20,6 +20,8 @@ enum network{
 	change_score_op,
 	change_discordia_op,
 	dispell_debuff,
+	win_lose_condition,
+	set_lord,
 }
 port = 6510;
 max_clients = 2;

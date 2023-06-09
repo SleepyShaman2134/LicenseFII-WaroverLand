@@ -16,7 +16,7 @@ function scr_eupho_4(){
 			}
 			if((game.targetuniti - 1) == vari){
 				game.targetunit.rgains += 1;
-				with(game.targetunit)
+				with(game)
 					scr_net_change_stats(targetuniti, targetunitj, targetunit.rgains, targetunit.gains, targetunit.rvigor, targetunit.vigor);
 			}
 		break;
@@ -26,7 +26,7 @@ function scr_eupho_4(){
 			scr_net_change_mana(player.willpower)
 			if((game.targetuniti + 1) == vari){
 				game.targetunit.rvigor =game.targetunit.rvigor + 2;
-				with(game.targetunit)
+				with(game)
 					scr_net_change_stats(targetuniti, targetunitj, targetunit.rgains, targetunit.gains, targetunit.rvigor, targetunit.vigor);
 			}
 			if((game.targetuniti - 1) == vari){

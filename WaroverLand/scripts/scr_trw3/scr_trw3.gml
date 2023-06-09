@@ -10,19 +10,32 @@ function scr_trw3(){
 			if(debuff_7 == 0){
 				score1 += unit_valuegp;
 				scr_net_change_score(score1);
+				with(spaces[used_unit_i][used_unit_j]){
+					game.score1 += structure;
+				}
+				scr_net_change_score(score1);
 			}
 			if(unit_used_tier == 1 && debuff_7 == 0){
 				score1 += 1;
+				with(spaces[used_unit_i][used_unit_j]){
+					game.score1 += structure;
+				}
 				scr_net_change_score(score1);
 			}
 		
 			if(unit_used_tier == 2 && debuff_7 == 0){
 				score1 += 2;
+				with(spaces[used_unit_i][used_unit_j]){
+					game.score1 += structure;
+				}
 				scr_net_change_score(score1);
 			}
 		
 			if(unit_used_tier == 3 && debuff_7 == 0){
 				score1 += 3;
+				with(spaces[used_unit_i][used_unit_j]){
+					game.score1 += structure;
+				}
 				scr_net_change_score(score1);
 			}
 		}

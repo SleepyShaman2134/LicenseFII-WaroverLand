@@ -7,4 +7,5 @@ if(obj_endturn.turn == 1 && game.ability_lord == 0){
 			scr_cast_euphonim(cardNum);
 		}
 	}
+	game.notshow = false;
 }

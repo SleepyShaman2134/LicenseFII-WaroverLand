@@ -26,7 +26,7 @@ lords_sprite= 0;
 willpower = 0;
 discordia = 0;
 magic = 0;
-gold = 3;
+gold =  3;
 tier1 = 0;
 tier2 = 0;
 tier3 = 0;
@@ -59,9 +59,9 @@ scr_init_info_lords();
 scr_init_players_units();
 scr_init_player_cards();
 i = 0;
-deck = instance_create_depth(2500, 2000, -5, obj_pdeck);
+deck = instance_create_depth(2500, 2600, -5, obj_pdeck);
 tier1 = instance_create_depth(2800, 1920, -3, obj_tier);
-lvl_button = instance_create_depth(2300, 2400, -3, obj_lvlmeter);
+lvl_button = instance_create_depth(2200, 2600, -2, obj_lvlmeter);
 //lord of the player
 lord = instance_create_depth(2800, 1020, -3, obj_lord);
 // here we put the values that the player set in the menu

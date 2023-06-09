@@ -4,6 +4,7 @@ if(obj_endturn.turn == 1){
 	if(buttontype == 1 && mouse_check_button_pressed(mb_left) && activate == 0){
 		activate = 1;
 		//ipos, jpos
+		
 		scr_cast_ability1(spacei, spacej);
 		activate = 0;
 	}

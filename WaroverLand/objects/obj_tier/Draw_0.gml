@@ -7,4 +7,11 @@ draw_self();
 if(selected == true){
 		x = mouse_x;
 		y = mouse_y;
-	}
+}
+draw_set_color(c_yellow);
+if(tier == 1 && selected == false)
+draw_text_transformed(x + 90, y - 90, string(3), 4, 4, 0);
+if(tier == 2 && selected == false)
+draw_text_transformed(x + 90, y - 90, string(5), 4, 4, 0);
+if(tier == 3 && selected == false)
+draw_text_transformed(x + 90, y - 90, string(8), 4, 4, 0);

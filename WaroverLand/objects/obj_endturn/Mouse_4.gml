@@ -10,6 +10,8 @@ if(turn == 1){
 	game.trombone_turn = 0;
 	game.trumpet_turn = 0;
 	game.ispressed = 0;
+	instance_destroy(obj_button);
+	instance_destroy(obj_btnlord);
 	//for obj_unit for abilities for targeting
 	game.released = 0;
 	//for triggering abilities

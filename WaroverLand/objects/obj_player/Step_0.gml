@@ -19,3 +19,11 @@ if(obj_endturn.turn == 1){
 		alarm[0] = 1;
 	}
 }*/
+
+if(discordia >= 5){
+	obj_game.lose = 1;
+}
+
+if(obj_game.score1 >= 100 && discordia <5){
+	obj_game.win = 1;
+}

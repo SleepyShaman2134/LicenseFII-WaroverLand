@@ -3,7 +3,7 @@
 
 randomise();
 score1 = 0;
-score2 = 100;
+score2 = 0;
 info_units=0;
 sprite_units = 0;
 nb_of_units = 0;
@@ -86,12 +86,24 @@ card_used = 0;
 spaces= 0;
 //History of the last actions used
 history = 0;
+//the lord of the opponent
+lord_op = 0;
 //gold of the opponent
 gold_op = 3;
 //magic/willpower of the opponent
 mana_op = 0;
 //discordia of the opponent
 discordia_op = 0;
+//check if client lost
+lose = 0;
+//check if client won
+win = 0;
+//check the info of the world
+write = instance_create_depth(0, 0, -5, obj_write);
+// hover effect
+hovered = false
+//for cards
+notshow = false;
 units= 0;
 gametier = 0;
 units1 = 0;

@@ -6,6 +6,10 @@ function scr_trw2(vari, varj, unit_tier, unit_rpoints){
 			if(game.debuff_7 == 0){
 				game.score1 += unit_rpoints + 1;
 				scr_net_change_score(game.score1);
+				with(game.spaces[game.used_unit_i][game.used_unit_j]){
+					game.score1 += structure;
+				}
+				scr_net_change_score(game.score1);
 			}
 			if(player.gold >= 10)
 			{
@@ -23,6 +27,10 @@ function scr_trw2(vari, varj, unit_tier, unit_rpoints){
 			if(game.debuff_7 == 0){
 				game.score1 += unit_rpoints + 2;
 				scr_net_change_score(game.score1);
+				with(game.spaces[game.used_unit_i][game.used_unit_j]){
+					game.score1 += structure;
+				}
+				scr_net_change_score(game.score1);
 			}
 			if(player.gold >= 9)
 			{
@@ -39,6 +47,10 @@ function scr_trw2(vari, varj, unit_tier, unit_rpoints){
 		if(unit_tier == 3){
 			if(game.debuff_7 == 0){
 				game.score1 += unit_rpoints + 3;
+				scr_net_change_score(game.score1);
+				with(game.spaces[game.used_unit_i][game.used_unit_j]){
+					game.score1 += structure;
+				}
 				scr_net_change_score(game.score1);
 			}
 			if(player.gold >= 8)

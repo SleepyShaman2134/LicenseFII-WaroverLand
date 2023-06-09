@@ -9,14 +9,15 @@ draw_text_transformed(x-110, y+70, rvigor, 4, 4, 0);
 draw_set_color(c_aqua);
 draw_text_transformed(x-110, y-150, blocked, 4, 4, 0);
 
-draw_set_color(c_black);
-draw_text_transformed(x-40, y+120, ipos, 4, 4, 0);
-draw_text_transformed(x-70, y+120, jpos, 4, 4, 0);
+//draw_set_color(c_black);
+//draw_text_transformed(x-40, y+120, ipos, 4, 4, 0);
+//draw_text_transformed(x-70, y+120, jpos, 4, 4, 0);
 
-draw_set_color(c_aqua);
-draw_text_transformed(x+40, y-150, unit_turn1, 4, 4, 0);
-draw_text_transformed(x+70, y-150, unit_turn2, 4, 4, 0);
-draw_text_transformed(x+100, y-150, unit_turn3, 4, 4, 0);
+//draw_set_color(c_aqua);
+//draw_text_transformed(x+40, y-150, unit_turn1, 4, 4, 0);
+//draw_text_transformed(x+70, y-150, unit_turn2, 4, 4, 0);
+//draw_text_transformed(x+100, y-150, unit_turn3, 4, 4, 0);
 
 
 
+//draw_text_transformed(x+100, y+150, string(game.hovered), 4, 4, 0)

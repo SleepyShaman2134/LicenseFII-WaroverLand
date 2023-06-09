@@ -6,5 +6,9 @@ if(selected == true){
 	x = mouse_x;
 	y = mouse_y;
 }
-draw_set_color(c_black);
-draw_text_transformed(x, y-150, cardNum, 4, 4, 0);
+if(card_in_hand == true){
+	draw_set_color(c_aqua);
+	draw_text_transformed(x + 50, y - 110, cardNum, 4, 4, 0);
+	//draw_text_transformed(x + 50, y + 110, hovered, 4, 4, 0);
+	//draw_text_transformed(x - 50, y + 110, game.notshow, 4, 4, 0);
+}

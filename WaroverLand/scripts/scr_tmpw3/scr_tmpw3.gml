@@ -15,6 +15,13 @@ function scr_tmpw3(){
 					score2 = 0;
 					scr_net_change_score_op(score2);
 				}
+				if(debuff_7 == 0){
+					with(spaces[used_unit_i][used_unit_j]){
+						game.score1 += structure;
+					}
+					scr_net_change_score(score1);
+				}
+				scr_net_change_score(score1);
 				other.player.willpower += 1;
 				scr_net_change_mana(other.player.willpower);
 			}
@@ -27,6 +34,13 @@ function scr_tmpw3(){
 					score2 = 0;
 					scr_net_change_score_op(score2);
 				}
+				if(debuff_7 == 0){
+					with(spaces[used_unit_i][used_unit_j]){
+						game.score1 += structure;
+					}
+					scr_net_change_score(score1);
+				}
+				scr_net_change_score(score1);
 				other.player.willpower += 2;
 				scr_net_change_mana(other.player.willpower);
 			}
@@ -38,6 +52,13 @@ function scr_tmpw3(){
 					score2 = 0;
 					scr_net_change_score_op(score2);
 				}
+				if(debuff_7 == 0){
+					with(spaces[used_unit_i][used_unit_j]){
+						game.score1 += structure;
+					}
+					scr_net_change_score(score1);
+				}
+				scr_net_change_score(score1);
 				other.player.willpower += 3;
 				scr_net_change_mana(other.player.willpower);
 			}

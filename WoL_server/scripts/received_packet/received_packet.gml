@@ -352,7 +352,7 @@ function received_packet(buffer, socket){
 			jposc = buffer_read(buffer, buffer_u8);
 			points = buffer_read(buffer, buffer_u8);
 			debuff = buffer_read(buffer, buffer_string);
-			show_message(string(iposc) +" " + string(jposc));
+			//show_message(string(iposc) +" " + string(jposc));
 			if(iposc == 5){
 				ipos = 0;
 			}
@@ -491,6 +491,35 @@ function received_packet(buffer, socket){
 			}
 		break;
 		
+		case network.win_lose_condition:
+			var condition, i = 0;
+			condition = buffer_read(buffer, buffer_string);
+			repeat(ds_list_size(socket_list)){
+				var _sock = ds_list_find_value(socket_list, i);
+				if(_sock != socket){
+					buffer_seek(server_buffer, buffer_seek_start, 0);
+					buffer_write(server_buffer, buffer_u8, network.win_lose_condition);
+					buffer_write(server_buffer, buffer_string, condition);
+					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
+				}
+				i++;
+			}
+		break;
+		
+		case network.set_lord:
+			var lord, i = 0;
+			lord = buffer_read(buffer, buffer_u8);
+			repeat(ds_list_size(socket_list)){
+				var _sock = ds_list_find_value(socket_list, i);
+				if(_sock != socket){
+					buffer_seek(server_buffer, buffer_seek_start, 0);
+					buffer_write(server_buffer, buffer_u8, network.set_lord);
+					buffer_write(server_buffer, buffer_u8, lord);
+					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
+				}
+				i++;
+			}
+		break;
 		
 	}
 }

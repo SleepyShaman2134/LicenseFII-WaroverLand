@@ -11,3 +11,4 @@ sprite_index = spr_loading;
 game = obj_game;
 player = obj_player;
 test = 0;
+write = instance_create_depth(0, 0, -5, obj_write);

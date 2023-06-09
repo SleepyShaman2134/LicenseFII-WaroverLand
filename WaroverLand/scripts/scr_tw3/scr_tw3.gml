@@ -7,21 +7,45 @@ function scr_tw3(){
 				game.score1 += 5;
 				scr_net_change_score(game.score1);
 			}
-			if(game.unit_valuegp >= game.score2){
+			if(game.unit_valuegp <= game.score2){
 				game.score2 -= game.unit_valuegp;
+				if(game.debuff_7 == 0){
+					with(game.spaces[game.used_unit_i][game.used_unit_j]){
+						game.score1 += structure;
+					}
+				scr_net_change_score(game.score1);
+				}
 				scr_net_change_score_op(game.score2);
 			}else{
 				game.score2 = 0;
+				if(game.debuff_7 == 0){
+					with(game.spaces[game.used_unit_i][game.used_unit_j]){
+						game.score1 += structure;
+					}
+				scr_net_change_score(game.score1);
+				}
 				scr_net_change_score_op(game.score2);
 			}
 		}
 		else{
 			if(game.debuff_7 == 0){
-				if(game.unit_valuegp >= game.score2){
+				if(game.unit_valuegp <= game.score2){
 					game.score2 -= game.unit_valuegp;
+					if(game.debuff_7 == 0){
+					with(game.spaces[game.used_unit_i][game.used_unit_j]){
+						game.score1 += structure;
+						}
+					scr_net_change_score(game.score1);
+					}
 					scr_net_change_score_op(game.score2);
 				}else{
 					game.score2 = 0;
+					if(game.debuff_7 == 0){
+					with(game.spaces[game.used_unit_i][game.used_unit_j]){
+						game.score1 += structure;
+						}
+					scr_net_change_score(game.score1);
+					}
 					scr_net_change_score_op(game.score2);
 				}
 			}

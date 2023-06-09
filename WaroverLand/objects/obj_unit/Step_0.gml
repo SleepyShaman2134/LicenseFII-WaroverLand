@@ -47,6 +47,41 @@ game.units1[ipos][jpos]==game.used_unit && game.activateability == 1){
 	}
 }
 
+
+mouseX = mouse_x;
+mouseY = mouse_y;
+if (point_in_rectangle(mouseX, mouseY, x-100, y - 100, x + 100, y + 100) && showbuttons == 0)
+{
+	// Mouse is hovering over the object
+	hovered = true;
+	
+}
+else
+{
+	// Mouse is not hovering over the object
+	hovered = false;
+	
+}
+
+if(hovered == true && showbuttons == 0){
+	with(write){
+		hovered = other.hovered;
+		type = other.player.player_units_sprite[other.cardNum];
+		ability1_press = 1;
+		ability2_press = 1;
+		ability3_press = 1;
+	}
+}
+else{
+	with(write){
+		hovered = other.hovered;
+		type = 0;
+		ability1_press = 0;
+		ability2_press = 0;
+		ability3_press = 0;
+	}
+}
+
 if(showbuttons == 1){
 	with(button1){
 			buttontype=1;

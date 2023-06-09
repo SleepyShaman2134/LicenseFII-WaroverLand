@@ -5,6 +5,9 @@ function scr_fhw1(vari, varj, unit_tier, points){
 	if(unit_tier == 1){
 		if(game.debuff_7 == 0)	{
 			game.score1 += points + 2;
+			with(game.spaces[vari][varj]){
+				game.score1 += structure;
+			}
 			scr_net_change_score(game.score1);
 		}
 		if(varj == 4  && ok == 0){

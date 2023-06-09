@@ -3,11 +3,17 @@
 function scr_fhw3(vari, varj, unit_tier, points){
 	if(game.used_unit_i == 3 && game.debuff_7 == 0){
 		game.score1 += points + 5;
+		with(game.spaces[game.used_unit_i][game.used_unit_j]){
+				game.score1 += structure;
+			}
 		scr_net_change_score(game.score1);
 	}
 	else{
 		if(game.debuff_7 == 0){
 			game.score1 += points;
+			with(game.spaces[game.used_unit_i][game.used_unit_j]){
+				game.score1 += structure;
+			}
 			scr_net_change_score(game.score1);
 		}
 	}

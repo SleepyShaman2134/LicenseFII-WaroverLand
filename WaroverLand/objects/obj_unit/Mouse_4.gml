@@ -79,6 +79,7 @@ if(obj_endturn.turn == 1){
 	if(game.ability_lord == 2 && mouse_check_button_pressed(mb_left) && ipos > 2){
 		game.ability_lord = 0;
 		gains -= 1;
+		rgains -=1;
 		player.willpower += 1;
 		scr_net_change_mana(player.willpower);
 		game.lord_use += 1;

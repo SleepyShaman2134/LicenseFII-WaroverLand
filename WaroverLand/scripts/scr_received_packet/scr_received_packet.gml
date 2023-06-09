@@ -46,6 +46,7 @@ function scr_received_packet(buffer){
 			obj_game.nb_turns = value1;  
 			obj_game.gold_turn =  value2;
 			player.gold += obj_game.gold_turn;
+			scr_net_change_gold(player.gold);
 			break;
 		case network.change_position:
 			obj_game.check += 1;
@@ -205,6 +206,25 @@ function scr_received_packet(buffer){
 					}
 				}
 			}
+		break;
+		
+		case network.win_lose_condition:
+			var condition;
+			condition = buffer_read(buffer, buffer_string);
+			switch(condition){
+				case "winner":
+				obj_game.win = 1;
+				break;
+				case "loser":
+				obj_game.lose = 1;
+				break;
+			}
+		break;
+		
+		case network.set_lord:
+			var lord;
+			lord = buffer_read(buffer, buffer_u8);
+			obj_game.lord_op = lord;
 		break;
 	}
 }

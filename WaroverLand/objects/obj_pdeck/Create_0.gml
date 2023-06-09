@@ -5,15 +5,15 @@
 //scr_init_player_cards();
 randomise();
 deckp1_x = 2500;
-deckp1_y = 2000;
+deckp1_y = 2600;
 deck_buffer_x = .4;
 deck_buffer_y = .4;
 player = obj_player;
 deck = 0;
-for(i = 0; i < 30; i += 1){
+for(i = 0; i < 21; i += 1){
 	deck[i]=0;
 }
-deckPCount = 30;
+deckPCount = 21;
 card_sprite = spr_cardback;
 scr_set_cards();
 scr_shuffle_decks();

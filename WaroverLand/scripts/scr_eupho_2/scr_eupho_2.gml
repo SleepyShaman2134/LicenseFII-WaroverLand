@@ -30,7 +30,7 @@ function scr_eupho_2(){
 	game.units1[game.targetuniti][game.targetunitj] = noone;
 	game.targetunitx = varx;
 	game.targetunity = vary;
-	scr_net_change_position(ipos, jpos, vari, varj);
+	scr_net_change_position(game.units1[vari][varj].ipos, game.units1[vari][varj].jpos, vari, varj);
 	with(game.spaces[vari][varj]){
 	isunit = 1;
 	}
