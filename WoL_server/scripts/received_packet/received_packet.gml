@@ -42,7 +42,7 @@ function received_packet(buffer, socket){
 			var i = 0;
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 				//show_message("1");
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_unit);
@@ -63,7 +63,7 @@ function received_packet(buffer, socket){
 			var nb_gold = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_turn);
 					buffer_write(server_buffer, buffer_u8, nb_turns);
@@ -152,7 +152,7 @@ function received_packet(buffer, socket){
 			}
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_position);
 					buffer_write(server_buffer, buffer_u8, ipos);
@@ -210,7 +210,7 @@ function received_packet(buffer, socket){
 			}
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_stats);
 					buffer_write(server_buffer, buffer_u8, ipos);
@@ -267,7 +267,7 @@ function received_packet(buffer, socket){
 			}
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_stats);
 					buffer_write(server_buffer, buffer_u8, ipos);
@@ -320,7 +320,7 @@ function received_packet(buffer, socket){
 			}
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.eliminate_unit);
 					buffer_write(server_buffer, buffer_u8, ipos);
@@ -336,7 +336,7 @@ function received_packet(buffer, socket){
 			debuff_name = buffer_read(buffer, buffer_string);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_world_debuff);
 					buffer_write(server_buffer, buffer_string, debuff_name);
@@ -390,7 +390,7 @@ function received_packet(buffer, socket){
 			}
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_unit_debuff);
 					buffer_write(server_buffer, buffer_u8, ipos);
@@ -408,7 +408,7 @@ function received_packet(buffer, socket){
 			gold = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_gold_op);
 					buffer_write(server_buffer, buffer_u8, gold);
@@ -423,7 +423,7 @@ function received_packet(buffer, socket){
 			mana = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_mana_op);
 					buffer_write(server_buffer, buffer_u8, mana);
@@ -438,7 +438,7 @@ function received_packet(buffer, socket){
 			points = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_score_op);
 					buffer_write(server_buffer, buffer_u8, points);
@@ -453,7 +453,7 @@ function received_packet(buffer, socket){
 			discordia = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_discordia_op);
 					buffer_write(server_buffer, buffer_u8, discordia);
@@ -468,7 +468,7 @@ function received_packet(buffer, socket){
 			points = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.change_score);
 					buffer_write(server_buffer, buffer_u8, points);
@@ -482,7 +482,7 @@ function received_packet(buffer, socket){
 			var i = 0;
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.dispell_debuff);
 					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
@@ -496,7 +496,7 @@ function received_packet(buffer, socket){
 			condition = buffer_read(buffer, buffer_string);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.win_lose_condition);
 					buffer_write(server_buffer, buffer_string, condition);
@@ -511,7 +511,7 @@ function received_packet(buffer, socket){
 			lord = buffer_read(buffer, buffer_u8);
 			repeat(ds_list_size(socket_list)){
 				var _sock = ds_list_find_value(socket_list, i);
-				if(_sock != socket){
+				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
 					buffer_write(server_buffer, buffer_u8, network.set_lord);
 					buffer_write(server_buffer, buffer_u8, lord);

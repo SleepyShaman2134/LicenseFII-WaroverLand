@@ -5,20 +5,20 @@
 #macro MAXPHAND 5 
 randomise();
 
-
+selected_lord = obj_selected_lord;
 handPCount = 0;
 xPos = 400;
 yPos = 2242;
-player_units = 0;
-player_units_sprite = 0;
-player_races = 0;
-player_cards = 0;
-player_cards_sprite = 0;
+player_units = selected_lord.player_units;
+player_units_sprite = selected_lord.player_units_sprite;
+player_races = selected_lord.player_races;
+player_cards = selected_lord.player_cards;
+player_cards_sprite = selected_lord.player_cards_sprite;
 hand = 0;
 handCard = 0;
 //number of lords
 lords = 0;
-lords_sprite= 0;
+lords_sprite= selected_lord.lords_sprite;
 
 //deck = instance_create_depth(1728, 2240, -5, obj_deck);
 
@@ -53,22 +53,23 @@ deck_buffer_y = .4;
 
 // create the 4 tiers of units using tier 1, 2, 3 and 4 sets objects
 
-scr_initialize_info_units();
-scr_init_info_lords();
+//scr_initialize_info_units();
+//scr_init_info_lords();
 //scr_init_sprite_array();
-scr_init_players_units();
-scr_init_player_cards();
+//scr_init_players_units();
+//scr_init_player_cards();
 i = 0;
 deck = instance_create_depth(2500, 2600, -5, obj_pdeck);
 tier1 = instance_create_depth(2800, 1920, -3, obj_tier);
 lvl_button = instance_create_depth(2200, 2600, -2, obj_lvlmeter);
+game = obj_game;
 //lord of the player
 lord = instance_create_depth(2800, 1020, -3, obj_lord);
 // here we put the values that the player set in the menu
 //HARDCODED
 with(lord){
 	var i = 0;
-	name = other.lords[i];
+	name_lord = other.selected_lord.chosen_lord;
 	xpos = 2800;
 	ypos = 1020;
 	player_lord = 0;
@@ -95,4 +96,3 @@ with(tier3){
 	tierjpos = 1320;
 	sprite_index = spr_tier3;
 }
-game = instance_create_depth(0, 0, -3, obj_game);

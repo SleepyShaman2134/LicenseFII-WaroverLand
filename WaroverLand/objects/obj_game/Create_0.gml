@@ -152,9 +152,16 @@ while(i != 6){
 		j++;
 	}
 	xspace = 900;
-	yspace += 300;
+	if(i != 2){
+		yspace += 320;
+	}
+	else{
+		yspace += 400;
+	}
 	i++;
 }
+
+button_endturn = instance_create_depth(2720, 608, -3, obj_endturn);
 //scr_initialize_info_cards_abilities();
 //scr_initialize_info_heroes();
 

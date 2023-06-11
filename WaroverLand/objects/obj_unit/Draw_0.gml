@@ -7,7 +7,7 @@ draw_set_color(c_red);
 draw_text_transformed(x-110, y+70, rvigor, 4, 4, 0);
 
 draw_set_color(c_aqua);
-draw_text_transformed(x-110, y-150, blocked, 4, 4, 0);
+draw_text_transformed(x+100, y-150, blocked, 4, 4, 0);
 
 //draw_set_color(c_black);
 //draw_text_transformed(x-40, y+120, ipos, 4, 4, 0);

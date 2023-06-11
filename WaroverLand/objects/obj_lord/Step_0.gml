@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-switch (name){
+switch (name_lord){
 	case 1:
 		sprite_index = spr_euphonim;
 		player_sprite = spr_euphonim;
@@ -16,7 +16,7 @@ if(mouse_check_button_pressed(mb_left) && showbuttons == 1 && game.ispressed ==2
 
 
 if(obj_game.lord_op == 0 && obj_game.opponent == 1){
-	scr_net_set_lord(name);
+	scr_net_set_lord(name_lord);
 }
 
 mouseX = mouse_x;

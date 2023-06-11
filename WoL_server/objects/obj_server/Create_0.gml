@@ -22,9 +22,10 @@ enum network{
 	dispell_debuff,
 	win_lose_condition,
 	set_lord,
+	player_disconnect,
 }
 port = 6510;
-max_clients = 2;
+max_clients = 50;
 turn = 1;
 count = 0;
 server_socket = network_create_server(network_socket_tcp, port, max_clients);

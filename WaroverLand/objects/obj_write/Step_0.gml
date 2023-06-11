@@ -6,27 +6,27 @@ y = 750;
 
 switch(type){
 	case spr_frenchhorn:
-		ability1 = "Gain +2/3/4 + 1/2/3 for each adjacent unit";
-		ability2 = "Gain +1 + structure power. Target one ally in the formation. It gets +1 vigor";
-		ability3 = "Target one free zone from the back formation, move it there and then gain +1/2/3 for each gainer in that formation";
+		ability1 = "1). Gain +2/3/4 + power + 1/2/3 for each adjacent unit";
+		ability2 = "2). Gain +1. Drag the cursor to one ally in the formation. It gets +1 vigor";
+		ability3 = "3). Drag the cursor to one free zone from the back formation, move it there and then gain +1/2/3 + power for each gainer in that formation";
 	break;
 	
 	case spr_tuba:
-		ability1 = "-2/3/4 points to the opponent Choose one of the opponent’s gainers. He has a chance to lose -1/2/3 gains based on their remaining vigor, until the end of their turn";
-		ability2 = "-1/2/3 to the opponent. -1 for each enemy unit on that column";
-		ability3 = "-1/2/3. Push 1 enemy unit and block it if possible";
+		ability1 = "1). -2/3/4 + power points to the opponent. Drag the cursor to one of the opponent’s gainers. He has a chance to lose -1/2/3 power based on their remaining vigor, until the end of their turn";
+		ability2 = "2). -1/2/3 + power to the opponent. -1 for each enemy unit on that column";
+		ability3 = "3). -power to the opponent. Drag to one of the unit's opponent. Push 1 enemy unit and block it if possible";
 	break;
 	
 	case spr_trombone:
-		ability1 = " Gain +1/2/3. Gain +1/2/3 gold";
-		ability2 = "+1/2/3. -10/9/8 gold; Lower discordia by 1";
-		ability3 = "+1/2/3 points. Push one ally unit anywhere in the forward formation Gain +1 gold for each gainer in that formation";
+		ability1 = "1). Gain +1/2/3 + power. Gain +1/2/3 gold";
+		ability2 = "2). +1/2/3 + power. -10/9/8 gold; Lower discordia by 1";
+		ability3 = "3). +1/2/3 + power. Taget one unit other than himself. Push one ally unit anywhere in the forward formation by dragging him. Gain +1 gold for each gainer in that formation";
 	break;
 	
 	case spr_trumpet:
-		ability1 = "–3/4/5. Target an enemy. It gets blocked one turn";
-		ability2 = "-2/3/4";
-		ability3 = "-1/2/3. Gain +1/2/3 willpower";
+		ability1 = "1). –3/4/5 + power. Drag the cursor to an enemy. It gets blocked one turn";
+		ability2 = "2). -2/3/4 + power";
+		ability3 = "3). -1/2/3 + power. Gain +1/2/3 willpower";
 	break;
 }
 
@@ -77,7 +77,7 @@ switch(type_lord){
 	case spr_euphonim:
 		ability1 = "1: Remove one of your units, gain 1 willpower and half the gold;"
 		ability2 = "2: One unit loses 1 maximum power, gain 1 willpower;";
-		ability3 = "Gain 3 discordia. Gain 2 willpower;"
-		ability4 ="If discordia is 3 or greater, gain 5 willpower;";
+		ability3 = "3: Gain 3 discordia. Gain 2 willpower;"
+		ability4 ="4: If discordia is 3 or greater, gain 5 willpower;";
 	break;
 }

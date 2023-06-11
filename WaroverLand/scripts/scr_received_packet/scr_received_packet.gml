@@ -226,5 +226,9 @@ function scr_received_packet(buffer){
 			lord = buffer_read(buffer, buffer_u8);
 			obj_game.lord_op = lord;
 		break;
+		
+		case network.player_disconnect:
+			game_end();
+			break;
 	}
 }

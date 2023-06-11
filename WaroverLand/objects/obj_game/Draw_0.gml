@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 draw_set_color(c_black);
+draw_set_font(Font_game);
 draw_text_transformed(2300, 100, "Score1: ", 4, 4, 0);
 draw_text_transformed(2700, 100, score1, 4, 4, 0);
 
@@ -37,7 +38,7 @@ draw_text_transformed(100, 250, "turn: ", 4, 4, 0);
 draw_text_transformed(400, 250, turn, 4, 4, 0);*/
 
 draw_text_transformed(1400, 100, "Opponent: ", 4, 4, 0);
-draw_text_transformed(1800, 100, opponent, 4, 4, 0);
+draw_text_transformed(1800, 100, lord_op, 4, 4, 0);
 
 /*draw_text_transformed(700, 150, "debuff_7: ", 4, 4, 0);
 draw_text_transformed(1100, 150, debuff_7, 4, 4, 0);*/
