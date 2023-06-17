@@ -119,8 +119,8 @@ function scr_received_packet(buffer){
 			switch(netdebuff){
 				case "debuff_7":
 					obj_game.debuff_7 = 1;
-					debuff = instance_create_depth(200, 2300, -3, obj_world_debuff);
-					with(debuff){
+					obj_game.debuffs[0] = instance_create_depth(200, 2300, -3, obj_world_debuff);
+					with(obj_game.debuffs[0]){
 						type_debuff = 7;
 						sprite_index = spr_debuff7;
 					}
@@ -128,8 +128,8 @@ function scr_received_packet(buffer){
 				
 				case "debuff_8":
 					obj_game.debuff_8 = 1;
-					debuff = instance_create_depth(200, 2600, -3, obj_world_debuff);
-					with(debuff){
+					obj_game.debuffs[1] = instance_create_depth(200, 2600, -3, obj_world_debuff);
+					with(obj_game.debuffs[1]){
 						type_debuff = 8;
 						sprite_index = spr_debuff8;
 					}

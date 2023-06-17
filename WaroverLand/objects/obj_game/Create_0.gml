@@ -104,12 +104,13 @@ write = instance_create_depth(0, 0, -5, obj_write);
 hovered = false
 //for cards
 notshow = false;
+//the debuffers
+debuffs = 0;
 units= 0;
 gametier = 0;
 units1 = 0;
 card1 = 0;
-i = 0;
-j = 0;
+
 xspace = 900;
 yspace = 500;
 varx = 0;
@@ -117,6 +118,11 @@ varj = 0;
 vari=0;
 varj=0;
 tier = 0;
+for(i = 0; i < 2; i++){
+	debuffs[i] = noone;
+}
+i = 0;
+j = 0;
 while(i != 6){
 	j = 0;
 	while (j != 5){

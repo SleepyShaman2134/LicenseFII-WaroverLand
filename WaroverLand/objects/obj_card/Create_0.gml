@@ -12,6 +12,8 @@ game = obj_game;
 meter = obj_lvlmeter;
 xPos = 2600;
 yPos = 2600;
-lord = "euphonim";
+if(player.lord.name_lord == 0){
+	lord = "euphonim";
+}
 hovered = false;
 write = instance_create_depth(0, 0, -5, obj_write);

@@ -35,6 +35,12 @@ if(turn == 1){
 	game.unit_used_tier = 0;
 	//the race of the used race
 	game.unit_used_race = 0;
+	if(game.debuffs[0] != noone){
+		instance_destroy(game.debuffs[0]);
+	}
+	if(game.debuffs[1] != noone){
+		instance_destroy(game.debuffs[1]);
+	}
 	for(i = 3; i < 6; i++){
 		for(j = 0; j < 5; j++){
 			if(game.units1[i][j] != noone){
