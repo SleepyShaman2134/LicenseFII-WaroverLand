@@ -183,7 +183,7 @@ function received_packet(buffer, socket){
 				ipos = 2;
 			}
 			
-			/*if(iposc == 2){
+			if(iposc == 2){
 				ipos = 3;
 			}
 			if(iposc == 1){
@@ -191,7 +191,7 @@ function received_packet(buffer, socket){
 			}
 			if(iposc == 0){
 				ipos = 5;
-			}*/
+			}
 			
 			if(jposc == 4){
 				jpos = 0;
@@ -229,7 +229,7 @@ function received_packet(buffer, socket){
 			var ipos, jpos , iposc, jposc, structure, i = 0;
 			iposc = buffer_read(buffer, buffer_u8);
 			jposc = buffer_read(buffer, buffer_u8);
-			structure = buffer_read(buffer, buffer_u8);
+			structure = buffer_read(buffer, buffer_s8);
 			if(iposc == 5){
 				ipos = 0;
 			}
@@ -240,7 +240,7 @@ function received_packet(buffer, socket){
 				ipos = 2;
 			}
 			
-			/*if(iposc == 2){
+			if(iposc == 2){
 				ipos = 3;
 			}
 			if(iposc == 1){
@@ -248,7 +248,7 @@ function received_packet(buffer, socket){
 			}
 			if(iposc == 0){
 				ipos = 5;
-			}*/
+			}
 			
 			if(jposc == 4){
 				jpos = 0;
@@ -269,10 +269,10 @@ function received_packet(buffer, socket){
 				var _sock = ds_list_find_value(socket_list, i);
 				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 					buffer_seek(server_buffer, buffer_seek_start, 0);
-					buffer_write(server_buffer, buffer_u8, network.change_stats);
+					buffer_write(server_buffer, buffer_u8, network.change_structure);
 					buffer_write(server_buffer, buffer_u8, ipos);
 					buffer_write(server_buffer, buffer_u8, jpos);
-					buffer_write(server_buffer, buffer_u8, structure);
+					buffer_write(server_buffer, buffer_s8, structure);
 					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
 				}
 				i++;

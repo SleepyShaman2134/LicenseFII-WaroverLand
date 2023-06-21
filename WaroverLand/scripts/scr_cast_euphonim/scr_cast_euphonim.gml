@@ -14,7 +14,7 @@ function scr_cast_euphonim(ability_number){
 			scr_net_change_gold(player.gold);
 		}
 		game.card_used = player.handCard[hand_position];
-		uses_per_turn -= 1;
+		uses_per_turn = 0;
 	}
 	if(ability_number == 2){
 		if(player.willpower >= obj_lvlmeter.lvl_meter || player.magic >= obj_lvlmeter.lvl_meter){
@@ -47,23 +47,25 @@ function scr_cast_euphonim(ability_number){
 	
 	if(ability_number == 5){
 		if(player.willpower >= obj_lvlmeter.lvl_meter || player.magic >= obj_lvlmeter.lvl_meter){
-			game.activate_card = 5;
+			//game.activate_card = 5;
 			game.affect_tile = "Demoralizing strike";
 			game.targetunit = 0;
 			game.targetstructure = 0;
 			game.meter = obj_lvlmeter.lvl_meter;
 			game.card_used = player.handCard[hand_position];
+			//uses_per_turn = 0;
 		}
 	}
 	if(ability_number == 6){
 		if(player.willpower >= 3 || player.magic >= 3){
 			player.willpower -= 3;
 			scr_net_change_mana(player.willpower);
-			player.discordia -= 1;
+			if(player.discordia != 0)
+				player.discordia -= 1;
 			scr_net_change_discordia(player.discordia);
 		}
 		game.card_used = player.handCard[hand_position];
-		uses_per_turn -= 1;
+		uses_per_turn = 0;
 	}
 	
 	if(ability_number == 7){
@@ -76,6 +78,7 @@ function scr_cast_euphonim(ability_number){
 			scr_net_change_mana(player.willpower);
 			scr_net_debuff("debuff_7");
 			game.card_used = player.handCard[hand_position];
+			uses_per_turn = 0;
 		}
 	}
 	
@@ -89,6 +92,7 @@ function scr_cast_euphonim(ability_number){
 			scr_net_change_mana(player.willpower);
 			scr_net_debuff("debuff_8");
 			game.card_used = player.handCard[hand_position];
+			uses_per_turn = 0;
 		}
 	}
 	

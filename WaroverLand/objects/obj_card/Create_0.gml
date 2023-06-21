@@ -7,12 +7,12 @@ hand_position = 0;
 cardNum = 0;
 
 player = obj_player;
-deck = obj_deck;
+deck = obj_pdeck;
 game = obj_game;
 meter = obj_lvlmeter;
 xPos = 2600;
 yPos = 2600;
-if(player.lord.name_lord == 0){
+if(obj_selected_lord.chosen_lord == 1){
 	lord = "euphonim";
 }
 hovered = false;

@@ -4,12 +4,9 @@ function scr_draw(draw){
 	if (deck.deckPCount - draw < 0) {
 		return;	
 	}
-	
-	
-	if (handPCount == MAXPHAND){
+	if (handPCount == 5){
 		return;
 	}
-	
 	for(i = 0; i < draw; i++){
 		deck.deckPCount = deck.deckPCount - 1;
 		hand[handPCount++] = deck.deck[deck.deckPCount];

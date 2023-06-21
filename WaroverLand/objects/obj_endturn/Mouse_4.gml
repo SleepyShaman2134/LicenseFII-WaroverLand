@@ -3,7 +3,9 @@
 if(turn == 1){
 	turn = 0;
 	game.nb_turns++;
-	game.gold_turn++;
+	if(game.gold_turn <= 10){
+		game.gold_turn++;
+	}
 	game.lord_use = 0;
 	game.ispressed = 0
 	game.showbuttons = 0;

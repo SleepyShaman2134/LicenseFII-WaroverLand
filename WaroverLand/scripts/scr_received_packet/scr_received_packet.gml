@@ -34,6 +34,7 @@ function scr_received_packet(buffer){
 			var _socket = buffer_read(buffer, buffer_u8);
 			player = instance_create_depth(0, 0, 0, obj_player);
 			player.socket = _socket;
+			//show_message(player.socket);
 			break;
 		case network.player_joined:
 			obj_game.opponent = 1;
@@ -96,7 +97,7 @@ function scr_received_packet(buffer){
 			var neti, netj, netstructure;
 			neti = buffer_read(buffer, buffer_u8);
 			netj = buffer_read(buffer, buffer_u8);
-			netstructure = buffer_read(buffer, buffer_u8);
+			netstructure = buffer_read(buffer, buffer_s8);
 			with(obj_game.spaces[neti][netj]){
 				structure = netstructure;
 			}

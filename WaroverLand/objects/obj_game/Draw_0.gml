@@ -54,13 +54,13 @@ if(confirm == 1){
 if(win == 1){
 	draw_set_color(c_black);
 	scr_net_set_condition("loser");
-	draw_text_transformed(2600, 750, string("WINNER"), 5, 5, 0);
+	draw_text_transformed(1400, 200, string("WINNER"), 5, 5, 0);
 	instance_create_depth(300, 2600, -6, obj_btnend);
 }
 
 if(lose == 1){
 	draw_set_color(c_black);
 	scr_net_set_condition("winner");
-	draw_text_transformed(2600, 750, string("LOSER"), 5, 5, 0);
+	draw_text_transformed(1400, 200, string("LOSER"), 5, 5, 0);
 	instance_create_depth(500, 2600, -6, obj_btnend);
 }

@@ -30,7 +30,11 @@ function scr_eupho_9(){
 				}
 			break;
 		}
-		game.card_used.uses_per_turn -= 1;
 		game.activate_card = 0;
+		game.targetunit = 0;
+		game.targetstructure = 0;
+		//game.meter = 0;
+		game.card_used.uses_per_turn = 0;
+		game.affect_tile = 0;
 	}
 }

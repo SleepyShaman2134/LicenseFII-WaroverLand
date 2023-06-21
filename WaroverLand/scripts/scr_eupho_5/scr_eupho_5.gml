@@ -6,12 +6,12 @@ function scr_eupho_5(){
 		 case 1:
 			obj_player.willpower -= meter;
 			scr_net_change_mana(obj_player.willpower);
-			other.structure = other.structure - meter;
-			scr_net_change_structure(vari, varj,  other.structure)
+			/*other.structure*/ spaces[other.vari][other.varj].structure =  spaces[other.vari][other.varj].structure - meter;
+			scr_net_change_structure(other.vari, other.varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 1;
-					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
+					scr_net_change_stats(ipos, jpos, rgains, gains, rvigor, vigor);
 				}
 			}
 		 break;
@@ -20,7 +20,7 @@ function scr_eupho_5(){
 			obj_player.willpower -= meter;
 			scr_net_change_mana( obj_player.willpower);
 			other.structure -= meter;
-			scr_net_change_structure(vari, varj,  other.structure)
+			scr_net_change_structure(other.vari, other.varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 2;
@@ -33,7 +33,7 @@ function scr_eupho_5(){
 			obj_player.willpower -= meter;
 			scr_net_change_mana( obj_player.willpower);
 			other.structure -= meter;
-			scr_net_change_structure(vari, varj,  other.structure)
+			scr_net_change_structure(other.vari, other.varj,  other.structure)
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 3;
@@ -49,6 +49,7 @@ function scr_eupho_5(){
 	game.activate_card = 0;
 	game.targetunit = 0;
 	game.targetstructure = 0;
-	game.meter = 0;
-	game.card_used.uses_per_turn -= 1;
+	//game.meter = 0;
+	game.card_used.uses_per_turn = 0;
+	game.affect_tile = 0;
 }

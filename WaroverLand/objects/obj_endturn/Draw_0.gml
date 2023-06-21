@@ -9,5 +9,5 @@ else{
 	draw_text_transformed(x - 125, y+130, "Your turn", 4, 4, 0);
 }
 
-draw_text_transformed(x - 125, y-200,  "Gold earned: ", 4, 4, 0);
+draw_text_transformed(x - 125, y-200,  "Turn: ", 4, 4, 0);
 draw_text_transformed(x+180, y-200, game.nb_turns, 4, 4, 0);

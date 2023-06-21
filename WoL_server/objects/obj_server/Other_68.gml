@@ -12,24 +12,22 @@ switch(type_event){
 		ds_list_add(socket_list, socket);
 		//we send to others that a new client appeared
 		var i = 0;
+		if(socket % 2 == 0)
+			turn = 1;
+		else{
+			turn = 0;
+		}
+		buffer_seek(server_buffer, buffer_seek_start, 0);
+		buffer_write(server_buffer, buffer_u8, network.player_connect);
+		buffer_write(server_buffer, buffer_u8, turn);
+		buffer_write(server_buffer, buffer_u8, socket);
+		network_send_packet(socket, server_buffer, buffer_tell(server_buffer));
 		repeat(ds_list_size(socket_list)){
 			var _sock = ds_list_find_value(socket_list, i);
 			if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock) || socket == _sock){
-				if(socket % 2 == 0)
-					turn = 1;
-				else{
-					turn = 0;
-				}
 				buffer_seek(server_buffer, buffer_seek_start, 0);
-				buffer_write(server_buffer, buffer_u8, network.player_connect);
-				buffer_write(server_buffer, buffer_u8, turn);
-				buffer_write(server_buffer, buffer_u8, socket);
-				network_send_packet(socket, server_buffer, buffer_tell(server_buffer));
-				if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock) || (_sock == socket)){
-					buffer_seek(server_buffer, buffer_seek_start, 0);
-					buffer_write(server_buffer, buffer_u8, network.player_joined);
-					network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));	
-				}
+				buffer_write(server_buffer, buffer_u8, network.player_joined);
+				network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));	
 			}
 			i++;
 		}
@@ -44,7 +42,11 @@ switch(type_event){
 			if((socket % 2 == 0 && socket - 1 == _sock) || (socket % 2 == 1 && socket + 1 == _sock)){
 				buffer_seek(server_buffer, buffer_seek_start, 0);
 				buffer_write(server_buffer, buffer_u8, network.player_disconnect);
-				network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));	
+				network_send_packet(_sock, server_buffer, buffer_tell(server_buffer));
+				ds_list_delete(socket_list, ds_list_find_index(socket_list, _sock));
+				with(ds_map_find_value(socket_to_instanceid, _sock)){
+					instance_destroy();
+				}
 			}
 			i++;
 		}

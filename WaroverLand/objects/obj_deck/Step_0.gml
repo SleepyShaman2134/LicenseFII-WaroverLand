@@ -12,11 +12,11 @@ if(obj_endturn.turn == 1){
 	if (keyboard_check_released(vk_left)){
 		with(player1){ scr_shuffle_decks();}
 	}
-	if (keyboard_check_released(vk_right)){
+	/*if (keyboard_check_released(vk_right)){
 		with(player1) {
 			scr_drawP(1);
 		}
-	}
+	}*/
 	if(keyboard_check_released(vk_escape)){
 		game_restart();
 	}

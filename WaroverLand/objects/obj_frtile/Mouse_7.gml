@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(obj_endturn.turn == 1)
+if(obj_endturn.turn == 1){
 	if(vari>2 && player.tier1.selected == true &&  game.gametier == 1 && isunit == 0 && player.gold >= 3){
 		scr_set_unit(x, y);
 		player.gold = player.gold - 3;
@@ -41,6 +41,9 @@ if(obj_endturn.turn == 1)
 		game.button_used = 0;
 		game.target1 = 0;
 	}
+	
+	
+}
 
 
 

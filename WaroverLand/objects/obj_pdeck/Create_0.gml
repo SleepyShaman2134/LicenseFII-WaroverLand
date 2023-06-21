@@ -13,7 +13,10 @@ deck = 0;
 for(i = 0; i < 21; i += 1){
 	deck[i]=0;
 }
-deckPCount = 21;
+if(obj_selected_lord.chosen_lord == 1){
+	deckPCount = 21;
+}
+
 card_sprite = spr_cardback;
 scr_set_cards();
 scr_shuffle_decks();

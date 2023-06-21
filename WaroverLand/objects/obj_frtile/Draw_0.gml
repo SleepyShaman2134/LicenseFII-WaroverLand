@@ -2,7 +2,8 @@
 // You can write your code in this editor
 draw_self();
 draw_set_color(c_yellow);
-//draw_text_transformed(x, y-170, isunit, 4, 4, 0);
+//draw_text_transformed(x - 50, y, vari, 4, 4, 0);
+//draw_text_transformed(x + 50, y, varj, 4, 4, 0);
 draw_text_transformed(x - 140, y-150, structure, 4, 4, 0);
 /*if(trying == 1){
 	draw_set_color(c_gray);

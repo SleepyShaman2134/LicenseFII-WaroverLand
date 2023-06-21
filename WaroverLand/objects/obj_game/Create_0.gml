@@ -106,6 +106,8 @@ hovered = false
 notshow = false;
 //the debuffers
 debuffs = 0;
+//check who begins
+check_begin = 0;
 units= 0;
 gametier = 0;
 units1 = 0;

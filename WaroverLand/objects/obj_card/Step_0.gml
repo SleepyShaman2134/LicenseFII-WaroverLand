@@ -57,6 +57,7 @@ if(mouse_check_button_released(mb_left)){
 
 if(uses_per_turn == 0){
 	scr_change_card(game.card_used);
+	//scr_shuffle_decks();
 }
 
 

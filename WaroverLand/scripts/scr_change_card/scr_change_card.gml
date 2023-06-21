@@ -4,7 +4,11 @@ function scr_change_card(used_card){
 	with(player){
 		var temp = hand[other.hand_position];
 		var position = other.hand_position;
-		deck.deckPCount -= 1;
+		if(deck.deckPCount != 0)
+			deck.deckPCount -= 1;
+		else{
+			deck.deckPCount = 16;
+		}
 		hand[other.hand_position] = deck.deck[deck.deckPCount];
 		deck.deck[deck.deckPCount] = temp;
 		instance_destroy(handCard[other.hand_position]);
@@ -16,5 +20,6 @@ function scr_change_card(used_card){
 			uses_per_turn = 1;
 		}
 		game.card_used = 0;
+		scr_shuffle_decks();
 	}
 }
