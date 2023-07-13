@@ -1,0 +1,45 @@
+Full shot character creation, knight wielding a trombone, grey background
+
+
+
+More details about stats: NO LONGER THE SAME
+Lords: Trubadorus - general (Tuba)
+Brass:Unique power in the first formation
+ 1: (Strategic)Draw an event card
+ 1: (Strategic)Earn 5 gold
+ 1: (Strategic)Draw a good event card next turn
+ 2: (Morale)+1 temp health to formation
+ 2: (Morale)Your opponent cannot use discordia cards
+ 2: (Strategic)Put to your opponent 1 event card: The cost of the first unit will be
+ +1 more gold. Draw 1 more event card
+
+ 3: (Morale)If only 1 unit in formation, raise its stats to +4/+4 
+ 3: (Morale)Charge power to another formation
+ 3: (Strategic) Remove 1 bad event card (Choose the badest one)
+
+ 4: Give charge status to any allied unit
+ 4: Lower Discordia bar to 5;
+
+
+
+
+There will be random points on the 3 of the formations, depending on the tier of the unit.
+The units will present positive and negative traits, movement points
+Positive traits: -Friendly: +1 point when a neighbour is present
+		 -Aggresive: +1 point when in the front formation
+		 -Loner: +3 points when alone in the formation
+		 -Supporter: +1 point to those near him in that formation
+		 -Strong voice: +1 point when in the last formation
+		 -Coordinator: +1 point when in the middle formation
+		 -Flexible: +2 movement points
+
+Negative traits: -Unfriendly: -1 point when near a neighbour
+		 -Coward: -1 point when in the front formation
+		 -Fear of lonelines: -3 points when alone in the formation
+		 -Uncooperative: -1 point to those near him in that formation
+		 -weak voice: -1 point when in the last formation
+		 -danger : -1 point when in the middle formation
+		 -unmoveable: cannot move
+
+obj deck 1728, 2240
+

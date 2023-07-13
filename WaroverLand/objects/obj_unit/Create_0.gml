@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+randomise();
 vigor = 0;
 rvigor = 0;
 tiertype = 0;
@@ -13,7 +13,7 @@ blocked = 0;
 unit_turn1 = 0;
 unit_turn2 = 0;
 unit_turn3 = 0;
-
+single2 = 0;
 cardNum=0;
 showbuttons = 0;
 single = 0;
@@ -22,6 +22,7 @@ ipos = 0;
 jpos = 0;
 xpos_unit = 0;
 ypos_unit = 0;
+single1 = 0;
 //ypos = 0;
 button1 = 0;
 button2 = 0;
@@ -32,3 +33,4 @@ set=false;
 game = obj_game;
 player = obj_player
 sprite_index = spr_tier1;
+write = instance_create_depth(0, 0, -5, obj_write);

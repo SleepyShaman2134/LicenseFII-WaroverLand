@@ -3,7 +3,6 @@
 //When player enters the game, this is a set of 10 cards each with random knights
 // here we create the 10 instances of random knights where we put the range of stats
 scr_initialize_info_units();
-randomise();
 selected = false;
 units=0;
 tieripos = 0;

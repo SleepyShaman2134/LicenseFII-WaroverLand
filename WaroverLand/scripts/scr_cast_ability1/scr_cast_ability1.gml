@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_cast_ability1(vari, varj){
 	if(unit_rvigor >0 ){
-		if(unit_sprite == spr_frenchhorn){
+		if(unit_sprite == spr_frenchhorn /*&& game.debuff_7 == 0*/){
 			game.used_unit = game.units1[spacei][spacej];
 			scr_fhw1(vari, varj, unit_tier, unit_rpoints);
 		}

@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_set_unit(xpos, ypos){
 	chooser = round(random_range(1, 4));
-	//chooser = 4;
 	for(i = 0; i < 4; i++){
 		if(chooser == player.player_units[i]){
 			game.card1 = i;

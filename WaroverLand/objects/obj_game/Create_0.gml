@@ -1,11 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 randomise();
 score1 = 0;
-score2 = 100;
+score2 = 0;
 info_units=0;
 sprite_units = 0;
 nb_of_units = 0;
+confirm = 0;
+//check functionality
+check = 0;
 //for obj_unit
 ispressed = 0;
 //for obj_unit for abilities for targeting
@@ -46,26 +50,81 @@ target1_ypos = 0;
 // second target of ability
 target2 = 0;
 // setting the turn of one player
-turn = 1;
+turn = 0;
 //global turn for abilities of a certain type of unit
 trombone_turn = 0;
 trumpet_turn = 0;
+//anouncement that an opponent has appeared
+opponent = 0;
+//number of turns
+nb_turns = 0;
+//gold gain per turn
+gold_turn = 0;
+//variables for activating a spell
+activate_card = 0;
+targetunit = 0;
+targetuniti = 0;
+targetunitj = 0;
+targetunitx = 0;
+targetunity = 0;
+targetstructure = 0;
+//variables for activating a lord's ability
+ability_lord = 0;
+//how many times can use his ability
+lord_use = 0;
+//level of the empowered spell
+meter = 0;
+//variable that touches the tiles
+affect_tile = 0;
+//Debuff of 7th abilty
+debuff_7 = 0;
+//debuff of 8th ability
+debuff_8 = 0;
+//check the spell used
+card_used = 0;
+// tiles
 spaces= 0;
+//History of the last actions used
+history = 0;
+//the lord of the opponent
+lord_op = 0;
+//gold of the opponent
+gold_op = 3;
+//magic/willpower of the opponent
+mana_op = 0;
+//discordia of the opponent
+discordia_op = 0;
+//check if client lost
+lose = 0;
+//check if client won
+win = 0;
+//check the info of the world
+write = instance_create_depth(0, 0, -5, obj_write);
+// hover effect
+hovered = false
+//for cards
+notshow = false;
+//the debuffers
+debuffs = 0;
+//check who begins
+check_begin = 0;
 units= 0;
 gametier = 0;
 units1 = 0;
 card1 = 0;
-i = 0;
-j = 0;
-xspace = 160;
+
+xspace = 900;
 yspace = 500;
 varx = 0;
 varj = 0;
 vari=0;
 varj=0;
 tier = 0;
-surface_resize(application_surface, 1800, 1800);
-window_set_size(1000, 1000);
+for(i = 0; i < 2; i++){
+	debuffs[i] = noone;
+}
+i = 0;
+j = 0;
 while(i != 6){
 	j = 0;
 	while (j != 5){
@@ -100,12 +159,20 @@ while(i != 6){
 		xspace += 288;
 		j++;
 	}
-	xspace = 160;
-	yspace += 300;
+	xspace = 900;
+	if(i != 2){
+		yspace += 320;
+	}
+	else{
+		yspace += 400;
+	}
 	i++;
 }
+
+button_endturn = instance_create_depth(2720, 608, -3, obj_endturn);
 //scr_initialize_info_cards_abilities();
 //scr_initialize_info_heroes();
-player = instance_create_depth(0, 0, -3, obj_player);
+
+
 
 

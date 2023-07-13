@@ -1,21 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-scr_init_sprite_array();
-
 card_drawn = false;
-
+selected = false;
 card_in_hand = false;
+hand_position = 0;
+cardNum = 0;
 
 player = obj_player;
-cardNum = 0;
-hand_position = 0;
-
-xPos = 0;
-yPos = 2242;
-to_x = 0;
-to_y = 0;
-
-card_witdh = 200;
-card_height = 200;
-
-selected = false;
+deck = obj_pdeck;
+game = obj_game;
+meter = obj_lvlmeter;
+xPos = 2600;
+yPos = 2600;
+if(obj_selected_lord.chosen_lord == 1){
+	lord = "euphonim";
+}
+hovered = false;
+write = instance_create_depth(0, 0, -5, obj_write);

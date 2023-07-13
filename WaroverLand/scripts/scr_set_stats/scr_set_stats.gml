@@ -20,7 +20,6 @@ function scr_set_stats(mysprite){
 			rvigor = vigor;
 			rgains = gains;
 		}
-		//HERE WE SET HIS ABILITIES
 	}
 	if(mysprite ==spr_tuba){
 		if(tiertype == 1){
@@ -41,7 +40,6 @@ function scr_set_stats(mysprite){
 			rvigor = vigor;
 			rgains = gains;
 		}
-		//HERE WE SET HIS ABILITIES
 	}
 	if(mysprite == spr_trombone){
 		if(tiertype == 1){
@@ -62,7 +60,6 @@ function scr_set_stats(mysprite){
 			rvigor = vigor;
 			rgains = gains;
 		}
-		//HERE WE SET HIS ABILITIES
 	}
 	if(mysprite == spr_trumpet){
 		if(tiertype == 1){
@@ -83,6 +80,17 @@ function scr_set_stats(mysprite){
 			rvigor = vigor;
 			rgains = gains;
 		}
-		//HERE WE SET HIS ABILITIES
+	}
+	if(ipos > 2){
+		buffer_seek(obj_client.client_buffer, buffer_seek_start, 0);
+
+		buffer_write(obj_client.client_buffer, buffer_u8, network.set_unit);
+		buffer_write(obj_client.client_buffer, buffer_u8, cardNum);
+		buffer_write(obj_client.client_buffer, buffer_u8, vigor);
+		buffer_write(obj_client.client_buffer, buffer_u8, gains);
+		buffer_write(obj_client.client_buffer, buffer_u8, ipos);
+		buffer_write(obj_client.client_buffer, buffer_u8, jpos);
+		buffer_write(obj_client.client_buffer, buffer_u8, tiertype);
+		network_send_packet(obj_client.client, obj_client.client_buffer, buffer_tell(obj_client.client_buffer));
 	}
 }

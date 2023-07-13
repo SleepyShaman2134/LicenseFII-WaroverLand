@@ -9,4 +9,4 @@ deck_ev1_y = 992;
 //face_up == 1 cards will be face up
 face_up = 0;
 
-player1 = obj_player;
+player1 = 0;
