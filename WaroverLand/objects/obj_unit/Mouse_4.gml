@@ -52,21 +52,24 @@ if(obj_endturn.turn == 1){
 		if(tiertype == 1){
 			player.gold += 1;
 			scr_net_change_gold(player.gold);
-			player.willpower += 1;
+			if(player.willpower != 5)
+				player.willpower += 1;
 			scr_net_change_mana(player.willpower);
 		}
 	
 		if(tiertype == 2){
 			player.gold += 2;
 			scr_net_change_gold(player.gold);
-			player.willpower += 1;
+			if(player.willpower != 5)
+				player.willpower += 1;
 			scr_net_change_mana(player.willpower);
 		}
 	
 		if(tiertype == 3){
 			player.gold += 4;
 			scr_net_change_gold(player.gold);
-			player.willpower += 1;
+			if(player.willpower != 5)
+				player.willpower += 1;
 			scr_net_change_mana(player.willpower);
 		}
 		with(game.spaces[ipos][jpos]){
@@ -80,7 +83,8 @@ if(obj_endturn.turn == 1){
 		game.ability_lord = 0;
 		gains -= 1;
 		rgains -=1;
-		player.willpower += 1;
+		if(player.willpower != 5)
+			player.willpower += 1;
 		scr_net_change_mana(player.willpower);
 		game.lord_use += 1;
 		scr_net_change_stats(ipos, jpos, rgains, gains, rvigor, vigor);

@@ -48,6 +48,10 @@ function scr_received_packet(buffer){
 			obj_game.gold_turn =  value2;
 			player.gold += obj_game.gold_turn;
 			scr_net_change_gold(player.gold);
+			if(player.discordia != 0){
+				player.discordia -=1;
+				scr_net_change_discordia(player.discordia);
+			}
 			break;
 		case network.change_position:
 			obj_game.check += 1;

@@ -22,7 +22,8 @@ function scr_tmpw3(){
 					scr_net_change_score(score1);
 				}
 				scr_net_change_score(score1);
-				other.player.willpower += 1;
+				if(other.player.willpower != 5)
+					other.player.willpower += 1;
 				scr_net_change_mana(other.player.willpower);
 			}
 		
@@ -41,7 +42,10 @@ function scr_tmpw3(){
 					scr_net_change_score(score1);
 				}
 				scr_net_change_score(score1);
-				other.player.willpower += 2;
+				if(other.player.willpower + 2 > 5)
+					other.player.willpower = 5;
+				else
+					other.player.willpower += 2;
 				scr_net_change_mana(other.player.willpower);
 			}
 			if(unit_used_tier == 3){
@@ -59,7 +63,10 @@ function scr_tmpw3(){
 					scr_net_change_score(score1);
 				}
 				scr_net_change_score(score1);
-				other.player.willpower += 3;
+				if(other.player.willpower + 3 > 5)
+					other.player.willpower = 5;
+				else
+					other.player.willpower += 3;
 				scr_net_change_mana(other.player.willpower);
 			}
 		}

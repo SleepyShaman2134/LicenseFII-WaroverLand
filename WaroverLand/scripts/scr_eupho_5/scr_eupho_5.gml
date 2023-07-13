@@ -24,7 +24,7 @@ function scr_eupho_5(){
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 2;
-					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
+					scr_net_change_stats(ipos, jpos, rgains, gains, rvigor, vigor);
 				}
 			}
 		break;
@@ -37,13 +37,13 @@ function scr_eupho_5(){
 			if(other.isunit == 1){
 				with(units1[other.vari][other.varj]){
 					rgains -= 3;
-					scr_net_change_stats(ipos, jpos, rgains, gain, rvigor, vigor);
+					scr_net_change_stats(ipos, jpos, rgains, gains, rvigor, vigor);
 				}
 			}
 		break;
 		
 		default:
-		show_message("SOMETHING WENT WRONG");
+		//show_message("SOMETHING WENT WRONG");
 		}
 	}
 	game.activate_card = 0;

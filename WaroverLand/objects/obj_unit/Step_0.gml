@@ -27,7 +27,7 @@ if(mouse_check_button_released(mb_left) && game.abilitytrigger == 0 &&
 game.units1[ipos][jpos]==game.used_unit && game.activateability == 1){
 	
 	if(rvigor < vigor){
-		var value = random_range(rvigor, vigor);
+		var value = random_range(0, rvigor);
 		if(value < vigor/2){
 			player.discordia += 1;
 			scr_net_change_discordia(player.discordia);

@@ -5,7 +5,10 @@ function scr_lord_ability3(){
 		case spr_euphonim:
 			player.discordia += 3;
 			scr_net_change_discordia(player.discordia);
-			player.willpower += 2;
+			if(player.willpower + 2 > 5)
+				player.willpower = 5;
+			else
+				player.willpower += 2;
 			scr_net_change_mana(player.willpower);
 			game.lord_use += 1;
 		break;
